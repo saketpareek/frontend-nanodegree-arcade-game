@@ -1,18 +1,13 @@
-// Enemies our player must avoid
+//Enemy class that holds all the properties of enemy, ie, image, position on canvas and random number generated saved in movement propery
 var Enemy = function() {
-    // Variables applied to each of our instances go here,
-    // we've provided one for you to get started
-
-    // The image/sprite for our enemies, this uses
-    // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
     this.x = 0;
     this.y = 60;
     this.movement = Math.floor(Math.random() * 400) + 200;
 };
 
-// Update the enemy's position, required method for game
-// Parameter: dt, a time delta between ticks
+// If Enemy reaches towards the boundary of the canvas, position of enemy is reset to start position and speed of enemy is generated randomly.
+// Further, for smoother enemy movement across canvas, it is multiplied by dt parameter
 Enemy.prototype.update = function(dt) {
   if (this.x >= 505) {
     this.x = 0;
@@ -21,15 +16,12 @@ Enemy.prototype.update = function(dt) {
   this.x += this.movement * dt;
 };
 
-// Draw the enemy on the screen, required method for game
+// Draws the enemy on the screen
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-// Now write your own player class
-// This class requires an update(), render() and
-// a handleInput() method.
-
+// Player class that holds properties of image, starting x and y positions, and increment values when player is moved on screen.
 var Player = function() {
   this.sprite = 'images/char-boy.png';
   this.x = 200;
@@ -39,10 +31,12 @@ var Player = function() {
 
 };
 
+// Draws player on screen
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+// HandleInput function to add or subtract movement value from player's current position
 Player.prototype.handleInput = function(keyPressed) {
   if (keyPressed === 'left') {
     if (this.x != 0) {
@@ -61,8 +55,9 @@ Player.prototype.handleInput = function(keyPressed) {
       this.y += this.yMovement;
     }
   }
+}
 
-};
+//getDistance function to calculate the distance between one object and other object on screen
 
 function getDistance(x1, y1, x2, y2) {
   let xDistance = x2 - x1;
@@ -70,6 +65,9 @@ function getDistance(x1, y1, x2, y2) {
 
   return Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
 }
+
+//If distance between player and enemy is less then 60, then player is set to original position
+//If player wins, player is again reset to original position
 
 Player.prototype.update = function() {
   if (getDistance(this.x, this.y, enemy3.x, enemy3.y) <= 60) {
@@ -91,19 +89,19 @@ Player.prototype.update = function() {
 
 };
 
+//Instantiating player and enemy objects
+
 let player = new Player();
 let enemy1 = new Enemy();
 let enemy2 = new Enemy();
 let enemy3 = new Enemy();
 
-
+//Setting y coordinates for enemy2 and enemy3
 enemy2.y = 145;
 enemy3.y = 230;
 
 
-// Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
-// Place the player object in a variable called player
+// allEnemies array containing enemies
 
 let allEnemies = [];
 allEnemies.push(enemy1);
