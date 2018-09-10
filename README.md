@@ -1,6 +1,66 @@
-frontend-nanodegree-arcade-game
-===============================
+# Arcade Game Project
+Arcade Game project is a game where player has to cross the path along the y axis avoiding collisions with enemies crossing along the x axis. Once player reaches blue waters, player wins. If player collides with any enemy, the player is back to its original position.
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## Getting Started
+To get started,
+
+```
+$ git clone https://github.com/saketpareek/frontend-nanodegree-arcade-game.git
+
+install Atom or any other code editor
+
+```
+
+## Prerequisites
+In order to run this, you need, 
+
+- Code Editor (Atom / Sublime text or eqv)
+- Browser (Google chrome / mozilla firefox or eqv)
+
+
+## Installing
+Follow the steps below to get this project up and running on your system,
+
+```
+Open cloned project folder
+
+Search for index.htm file
+
+Open the file in any browser 
+
+```
+
+or
+
+```
+Open any code editor (eg, atom)
+
+Open cloned project folder in code editor
+
+Run the code via atom live server package in atom
+
+```
+
+## Game Dependencies
+
+
+1. Use keyboard arrow keys to manipulate player position in game
+2. 'Up' arrow key moves the player one block forward 
+3. 'Down' arrow key moves the player one block downward
+4. 'Right' arrow key moves the player one block on right side 
+5. 'Left' arrow key moves the player one block on left side
+6. Avoid collision with enemies
+7. Reach blue waters to win game
+
+
+## Built With
+
+- HTML
+- CSS 
+- jQuery
+
+## Refrences 
+
+- http://api.jquery.com/category/events/
+
