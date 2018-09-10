@@ -44,6 +44,23 @@ Player.prototype.render = function() {
 };
 
 Player.prototype.handleInput = function(keyPressed) {
+  if (keyPressed === 'left') {
+    if (this.x != 0) {
+      this.x -= this.xMovement;
+    }
+  } else if (keyPressed === 'right') {
+    if (this.x != 400) {
+      this.x += this.xMovement;
+    }
+  } else if (keyPressed === 'up') {
+    if (this.y != -10) {
+      this.y -= this.yMovement;
+    }
+  } else if (keyPressed === 'down') {
+    if (this.y != 400) {
+      this.y += this.yMovement;
+    }
+  }
 
 };
 
