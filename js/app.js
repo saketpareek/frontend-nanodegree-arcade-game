@@ -4,7 +4,7 @@ var Enemy = function() {
     this.x = 0;
     this.y = 60;
     this.movement = Math.floor(Math.random() * 400) + 200;
-};
+}
 
 // If Enemy reaches towards the boundary of the canvas, position of enemy is reset to start position and speed of enemy is generated randomly.
 // Further, for smoother enemy movement across canvas, it is multiplied by dt parameter
@@ -14,12 +14,12 @@ Enemy.prototype.update = function(dt) {
     this.movement = Math.floor(Math.random() * 400) + 200;
   }
   this.x += this.movement * dt;
-};
+}
 
 // Draws the enemy on the screen
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-};
+}
 
 // Player class that holds properties of image, starting x and y positions, and increment values when player is moved on screen.
 var Player = function() {
@@ -29,12 +29,12 @@ var Player = function() {
   this.xMovement = 100;
   this.yMovement = 82;
 
-};
+}
 
 // Draws player on screen
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-};
+}
 
 // HandleInput function to add or subtract movement value from player's current position
 Player.prototype.handleInput = function(keyPressed) {
@@ -87,7 +87,7 @@ Player.prototype.update = function() {
     this.y = 400;
   }
 
-};
+}
 
 //Instantiating player and enemy objects
 
