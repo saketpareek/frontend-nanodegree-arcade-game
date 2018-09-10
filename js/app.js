@@ -64,6 +64,13 @@ Player.prototype.handleInput = function(keyPressed) {
 
 };
 
+function getDistance(x1, y1, x2, y2) {
+  let xDistance = x2 - x1;
+  let yDistance = y2 - y1;
+
+  return Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
+}
+
 Player.prototype.update = function() {
   if (getDistance(this.x, this.y, enemy3.x, enemy3.y) <= 60) {
     this.x = 200;
