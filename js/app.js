@@ -31,6 +31,10 @@ var Player = function() {
 
 }
 
+Player.prototype.handleInput = function(keyPressed) {
+  
+};
+
 Player.prototype.update = function() {
 
 }
