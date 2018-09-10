@@ -31,6 +31,11 @@ var Player = function() {
 
 }
 
+let player = new Player();
+let enemy1 = new Enemy();
+let enemy2 = new Enemy();
+let enemy3 = new Enemy();
+
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
