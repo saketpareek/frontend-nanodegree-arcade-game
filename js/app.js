@@ -42,6 +42,9 @@ let enemy3 = new Enemy();
 // Place the player object in a variable called player
 
 let allEnemies = [];
+allEnemies.push(enemy1);
+allEnemies.push(enemy2);
+allEnemies.push(enemy3);
 
 
 // This listens for key presses and sends the keys to your
