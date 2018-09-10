@@ -34,6 +34,8 @@ var Player = function() {
   this.sprite = 'images/char-boy.png';
   this.x = 200;
   this.y = 400;
+  this.xMovement = 100;
+  this.yMovement = 82;
 
 };
 
