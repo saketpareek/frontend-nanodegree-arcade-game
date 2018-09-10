@@ -65,6 +65,22 @@ Player.prototype.handleInput = function(keyPressed) {
 };
 
 Player.prototype.update = function() {
+  if (getDistance(this.x, this.y, enemy3.x, enemy3.y) <= 60) {
+    this.x = 200;
+    this.y = 400;
+  }
+  if (getDistance(this.x, this.y, enemy2.x, enemy2.y) <= 60) {
+    this.x = 200;
+    this.y = 400;
+  }
+  if (getDistance(this.x, this.y, enemy1.x, enemy1.y) <= 60) {
+    this.x = 200;
+    this.y = 400;
+  }
+  if (this.y === -10) {
+    this.x = 200;
+    this.y = 400;
+  }
 
 };
 
