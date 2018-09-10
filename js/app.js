@@ -31,6 +31,10 @@ var Player = function() {
 
 }
 
+Player.prototype.update = function() {
+
+}
+
 let player = new Player();
 let enemy1 = new Enemy();
 let enemy2 = new Enemy();
