@@ -29,15 +29,19 @@ Enemy.prototype.render = function() {
 
 var Player = function() {
 
-}
+};
+
+Player.prototype.render = function() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
 
 Player.prototype.handleInput = function(keyPressed) {
-  
+
 };
 
 Player.prototype.update = function() {
 
-}
+};
 
 let player = new Player();
 let enemy1 = new Enemy();
