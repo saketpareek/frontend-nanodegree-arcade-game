@@ -65,6 +65,17 @@ function getDistance(x1, y1, x2, y2) {
   return Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
 }
 
+
+
+function showModal() {
+    $('#winModal').modal('show');
+}
+
+$('.btn, .close').click(function(){
+  location.reload();
+});
+
+
 //If distance between player and enemy is less then 60, then player is set to original position
 //If player wins, player is again reset to original position
 
