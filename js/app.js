@@ -78,6 +78,7 @@ $('.btn, .close').click(function(){
 
 //If distance between player and enemy is less then 60, then player is set to original position
 //If player wins, player is again reset to original position
+//Set enemy movement to 0 and run function to show modal when player wins the game
 
 Player.prototype.update = function() {
   if (getDistance(this.x, this.y, enemy3.x, enemy3.y) <= 60) {
@@ -93,6 +94,10 @@ Player.prototype.update = function() {
     this.y = 400;
   }
   if (this.y === -10) {
+    enemy1.movement = 0;
+    enemy2.movement = 0;
+    enemy3.movement = 0;
+    showModal();
     this.x = 200;
     this.y = 400;
   }
