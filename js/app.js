@@ -28,7 +28,6 @@ var Player = function() {
   this.y = 400;
   this.xMovement = 100;
   this.yMovement = 82;
-
 }
 
 // Draws player on screen
