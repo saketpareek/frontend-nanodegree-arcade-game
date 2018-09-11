@@ -1,3 +1,9 @@
 body {
     text-align: center;
 }
+
+/* Center positioning the modal */
+.modal-content {
+  position: relative;
+  top: 170px;
+}
